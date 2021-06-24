@@ -26,7 +26,7 @@ class RedisServiceTest {
         long start = System.currentTimeMillis();
         redisService.add();
         long end = System.currentTimeMillis();
-        System.out.println("데이터 적재 시간: " + (double)(end-start)/1000);
+        System.out.println("데이터 적재 시간: " + (end-start) / 1000 + "s " + (end-start) % 1000 + "ms");
 
         assertTrue(zSetOperations.zCard(KEY) > 9_000_000);
     }
