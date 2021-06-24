@@ -42,8 +42,8 @@ public class RedisService {
         }
     }
 
-    public List<String> getPlayers() {
-        Set<String> range = zSetOperations.reverseRange(KEY, 0, 49_999); // 상위 5만개 데이터 추출
+    public List<String> getPlayers() { // 데이터 추출
+        Set<String> range = zSetOperations.reverseRange(KEY, 0, 9_982_425);
         return new ArrayList<>(range);
     }
 

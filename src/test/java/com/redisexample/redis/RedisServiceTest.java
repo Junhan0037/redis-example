@@ -23,7 +23,11 @@ class RedisServiceTest {
 
     @Test
     public void add() {
+        long start = System.currentTimeMillis();
         redisService.add();
+        long end = System.currentTimeMillis();
+        System.out.println("데이터 적재 시간: " + (double)(end-start)/1000);
+
         assertTrue(zSetOperations.zCard(KEY) > 9_000_000);
     }
 
@@ -32,9 +36,9 @@ class RedisServiceTest {
         long start = System.currentTimeMillis();
         List<String> players = redisService.getPlayers();
         long end = System.currentTimeMillis();
-        System.out.println("프로그램 수행 시간: " + (double)(end-start)/1000);
+        System.out.println("데이터 추출 시간: " + (end-start) / 1000 + "s " + (end-start) % 1000 + "ms");
 
-        assertTrue(players.size() == 50_000);
+        assertTrue(players.size() == 9_982_426);
     }
 
 }
