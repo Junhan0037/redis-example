@@ -6,7 +6,7 @@
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545.svg?style=flat-square&logo=MariaDB&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-C71A36.svg?style=flat-square&logo=apache-maven&logoColor=white)
 
-Redis의 Sorted Set을 사용한 Ranking API를 만들어보고 약 천만건의 player 데이터를 통해 RDB와 Sorted Set의 성능 차이가 얼마나 있는지에 대해서 알아보도록 하겠습니다.
+Redis의 Sorted Set을 사용해서 천만건의 player 데이터를 통해 RDB와 Sorted Set의 성능 차이가 얼마나 있는지에 대해서 알아보도록 하겠습니다.
 
 ## 순서
 
